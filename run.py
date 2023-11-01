@@ -7,6 +7,15 @@ from griptape.tasks import PromptTask, TextSummaryTask, ToolkitTask
 from griptape.tokenizers import OpenAiTokenizer
 from griptape.tools import FileManager, WebScraper
 
+
+# models seem to do better when smart quotes are converted to ascii, especially
+# when identifying quotes in the text.
+def convert_smart_quotes_to_ascii(text):
+    text = text.replace("“", '"').replace("”", '"')  # Replace double smart quotes
+    text = text.replace("‘", "'").replace("’", "'")  # Replace single smart quotes
+    return text
+
+
 # TODO click w/cli arguments
 
 with open("notes.md", "r") as file:
@@ -14,6 +23,8 @@ with open("notes.md", "r") as file:
 
 with open("summarization_prompt.md", "r") as file:
     summarization_prompt = file.read()
+
+content_to_summarize = convert_smart_quotes_to_ascii(content_to_summarize)
 
 tokenizer = OpenAiTokenizer(model=OpenAiTokenizer.DEFAULT_OPENAI_GPT_4_MODEL)
 
@@ -50,8 +61,6 @@ Combine the notes below:
 {% endfor %}
   """
 )
-
-# TODO need to normalize smart quotes
 
 for content_chunk in content_to_summarize_chunks:
     text_chunk = content_chunk.value

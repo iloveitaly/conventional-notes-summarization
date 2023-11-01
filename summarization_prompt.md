@@ -1,22 +1,21 @@
-The above notes are from a phone call with a potential customer. Summarize using this format:
+The above notes are from a phone call with a potential customer. In the lists below, there could be zero or one entry; do not make up entries if you cannot find any. Summarize using this format:
 
-**Summary**: 400 word summary of context (team, company size, type of customer, etc), key findings or learnings, repeated points, or interesting topics in the notes that seemed to have more emphasis.
+**Summary**: 400 word summary of context (team, company size, type of customer, etc), key findings or learnings, repeated points, or interesting topics.
 
 **Context:**
-- Context snippets are marked with a bolded `Context:`
+- List of sentences that (must) start with a bolded `Context:`
 
 **Learnings**:
-- Key learnings are marked with a bolded `Learning:` or `Concept:`
+- List of sentences that (must) start with a bolded `Learning:` or `Concept:`. If `this` in unclear in the sentence, replace it with context from the sentence.
 
 **Questions**:
-- Followup questions are marked with a bolded `Question:`.
+- List sentences that start with a bolded `Question:`.
 
 **Ideas**:
-- New product or business ideas are marked with a bolded `Idea:`
+- List of ideas that start with a bolded `Idea:`
 
 **Links**:
-- Bullet list of any hyperlinks in the notes. Add 5-10 words of context about each link.
+- List of any hyperlinks in the notes. Add 5-10 words of context about each link.
 
 **Quotes**:
-
 - List of direct, verbatim quotes. Add 5-10 words of context about each quote.
