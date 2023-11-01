@@ -2,6 +2,9 @@ The above notes are from a phone call with a potential customer. Summarize using
 
 **Summary**: 400 word summary of context (team, company size, type of customer, etc), key findings or learnings, repeated points, or interesting topics in the notes that seemed to have more emphasis.
 
+**Context:**
+- Context snippets are marked with a bolded `Context:`
+
 **Learnings**:
 - Key learnings are marked with a bolded `Learning:` or `Concept:`
 
@@ -12,7 +15,8 @@ The above notes are from a phone call with a potential customer. Summarize using
 - New product or business ideas are marked with a bolded `Idea:`
 
 **Links**:
-- Bullet list of any hyperlinks in the notes, which generally represent newly-discovered URLs
+- Bullet list of any hyperlinks in the notes. Add 5-10 words of context about each link.
 
 **Quotes**:
-- List of direct, verbatim quotes with 5-10 word context about what it is about.
+
+- List of direct, verbatim quotes. Add 5-10 words of context about each quote.

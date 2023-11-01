@@ -1,6 +1,7 @@
 import logging
 
 from griptape.chunkers import MarkdownChunker
+from griptape.drivers import BasePromptDriver, OpenAiChatPromptDriver
 from griptape.structures import Workflow
 from griptape.tasks import PromptTask, TextSummaryTask, ToolkitTask
 from griptape.tokenizers import OpenAiTokenizer
@@ -31,7 +32,12 @@ content_to_summarize_chunks = MarkdownChunker(
 logger = logging.getLogger(__name__)
 logger.info(f"chunk size chunks={len(content_to_summarize_chunks)}")
 
-workflow = Workflow()
+workflow = Workflow(
+    prompt_driver=OpenAiChatPromptDriver(
+        model=tokenizer.model,
+        temperature=0,
+    )
+)
 
 meta_summarization_task = PromptTask(
     """
@@ -44,6 +50,8 @@ Combine the notes below:
 {% endfor %}
   """
 )
+
+# TODO need to normalize smart quotes
 
 for content_chunk in content_to_summarize_chunks:
     text_chunk = content_chunk.value
