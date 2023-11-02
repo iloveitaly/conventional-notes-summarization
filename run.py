@@ -29,7 +29,7 @@ content_to_summarize = convert_smart_quotes_to_ascii(content_to_summarize)
 tokenizer = OpenAiTokenizer(model=OpenAiTokenizer.DEFAULT_OPENAI_GPT_4_MODEL)
 
 # the summarization prompt will be added to each chunk, so let's count it and leave some space for a response
-response_token_buffer = 300
+response_token_buffer = 400
 summarization_prompt_token_count = tokenizer.token_count(summarization_prompt)
 max_tokens = (
     tokenizer.max_tokens - summarization_prompt_token_count - response_token_buffer
@@ -41,6 +41,7 @@ content_to_summarize_chunks = MarkdownChunker(
 ).chunk(content_to_summarize)
 
 logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
 logger.info(f"chunk size chunks={len(content_to_summarize_chunks)}")
 
 workflow = Workflow(
