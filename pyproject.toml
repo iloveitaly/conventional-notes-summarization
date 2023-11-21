@@ -8,11 +8,11 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = ">3.11,<3.12"
-griptape = "^0.19.3"
+griptape = "^0.19.4"
 
 
 [tool.poetry.group.dev.dependencies]
-black = "^23.10.1"
+black = "^23.11.0"
 isort = "5.11.5"
 
 [build-system]
