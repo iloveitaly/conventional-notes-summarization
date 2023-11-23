@@ -18,16 +18,17 @@ def convert_smart_quotes_to_ascii(text):
 
 # TODO click w/cli arguments
 
-target_file = "research.md"
+target_file = "notes.md"
 with open(target_file, "r") as file:
     content_to_summarize = file.read()
 
-target = "research_prompt.md"
+target = "summarization_prompt.md"
 with open(target, "r") as file:
     summarization_prompt = file.read()
 
 content_to_summarize = convert_smart_quotes_to_ascii(content_to_summarize)
 
+# TODO update to turbo to decrease cost of running this
 tokenizer = OpenAiTokenizer(model=OpenAiTokenizer.DEFAULT_OPENAI_GPT_4_MODEL)
 
 # the summarization prompt will be added to each chunk, so let's count it and leave some space for a response
@@ -77,5 +78,4 @@ for content_chunk in content_to_summarize_chunks:
 
 result = workflow.run()
 
-# TODO this seems wrong
-print(result[0].output.value)
+print(result.output_task.output.value)
