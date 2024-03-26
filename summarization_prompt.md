@@ -6,7 +6,10 @@ The above notes are from a phone call with a potential customer. Do not start li
 - List of sentences that start with a bolded `Context:`
 
 **Learning**:
-- List of sentences that start with a bolded `Learning:` or `Concept:`. If `this` in unclear in the sentence, replace it with context from the sentence.
+- List of sentences that start with a bolded `Learning:` or `Concept:`.
+
+**Summarized Learnings:**
+- For each section where a bolded `Summarize` is encountered, write a 1-2 sentence summary of the sentence where `Summarize` is located and any sub-bullets.
 
 **Questions**:
 - List of sentences in the notes that start with a bolded 'Question:'. Omit this section if there are no matching entries.
