@@ -1,0 +1,15 @@
+name: Repository Metadata Sync
+
+on:
+  push:
+    branches: [main, master]
+
+jobs:
+  repo_sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Repository Metadata Sync
+        uses: iloveitaly/github-actions-metadata-sync@v1
+        with:
+          TOKEN: ${{ secrets.GH_PERSONAL_TOKEN }}
